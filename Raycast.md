@@ -24,6 +24,7 @@ Physics.Raycast(Vector3 origin,Vector3 direction,RaycastHit hitinfo,float distan
 > 2. 一般使用前三个参数，后面几个参数为可选项
 > 3. 为了在游戏界面能显示出射线，通常使用`Debug.DrawLine()`
 > 4. 当物体有`collider` 时，才能被`Raycast`检测到
+> 5. `DrawLine()`只有在Gizmos按钮按下时可见
 
 
 
@@ -38,6 +39,7 @@ if(Physics.Raycast(ray, out hitInfo, 				maxInstance,mask,QueryTriggerInteractio
 {
 	//Ignore代表：如果collider打开了IsTrigger开关，则该碰撞体会被这条射线忽略
 	Debug.Log(hitInfo.collider);
+	
 	//Debug.DrawLine(transform.position,hitInfo.point, 		Color.red);
 	Debug.DrawRay(transform.position, hitInfo.point, 		Color.yellow);	
 }
