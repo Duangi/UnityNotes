@@ -233,6 +233,18 @@ void Update()
     }
 ```
 
+### 重启游戏
+
+```
+using UnityEngine.SceneManagement;
+
+public void RestartGame(){
+	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+}
+```
+
+
+
 ### 后续功能添加
 
 1. 继续优化界面，给各个东西都加上动画，让游戏更具生命力
